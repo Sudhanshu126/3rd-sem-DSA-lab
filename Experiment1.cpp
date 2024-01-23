@@ -7,19 +7,6 @@ using namespace std;
 
 class DataArray
 {
-    private:
-    bool IsIndexValid(int index)
-    {
-        if(index >= 0)
-        {
-            return true;
-        }
-        else
-        {
-        return false;
-        }
-    }
-
     public: 
     void Create()
     {
@@ -27,7 +14,7 @@ class DataArray
         {
             cout<<"Empty arrray created."<<endl;
         }
-        else if(IsIndexValid(size))
+        else if(size > 0)
         {
             cout<<"Enter "<<size<<" elements: "<<endl;
             for(int i=0; i<size; i++)
@@ -41,7 +28,6 @@ class DataArray
             size = 0;
         }
     }
-
     void Display()
     {
         if(size == 0)
@@ -57,7 +43,6 @@ class DataArray
             cout<<endl;
         }
     }
-
     void Insert()
     {
         if(size == MAX)
@@ -72,7 +57,7 @@ class DataArray
         {
             index = size;
         }
-        if(IsIndexValid(index))
+        if(index > 0)
         {
             cout<<"Enter element: ";
             cin>>element;
@@ -92,7 +77,6 @@ class DataArray
         }
         Display();
     }
-
     void Delete()
     {
         if(size == 0)
@@ -116,21 +100,17 @@ class DataArray
         Display();
     }
 };
-
 int main()
 {
     DataArray d;
     cout<<"Enter the size of array: ";
     cin>>size;
-
     if(size > 10000)
     {
         cout<<"Size is too big"<<endl;
         size = 0;
     }
-
     d.Create();
-
     while(true)
     {
         cout<<"Choose one option:-"<<endl<<"1. Display array"<<endl<<"2. Insert element"<<endl<<"3. Delete element"<<endl<<"4. Exit"<<endl<<"Enter choice: ";
