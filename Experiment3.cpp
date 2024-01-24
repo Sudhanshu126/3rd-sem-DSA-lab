@@ -63,7 +63,7 @@ void ViewElements(Stack st){
 int main(){
     Stack st;
     int choice, element;
-    while(1){
+    while(true){
         cout<<"---MENU---"<<endl<<"1. Push to stack"<<endl<<"2. Pop from stack"<<endl<<"3. Check palindrome"<<endl<<"4. View elements"<<endl<<"5. Exit"<<endl<<"Enter choice: ";
         cin>>choice;
         switch(choice){
