@@ -35,7 +35,7 @@ void Insert(){
     cin>>index;
     if(index > size)
         index = size;
-    if(index > 0){
+    if(index >= 0){
         cout<<"Enter element: ";
         cin>>element;
         int temp;

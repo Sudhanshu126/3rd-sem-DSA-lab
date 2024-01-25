@@ -74,7 +74,7 @@ int main(){
             case 2: cout<<"Popped "<<st.Pop()<<endl;
                 break;
             case 3:
-                if(CheckPalindrome(st) == 1)
+                if(CheckPalindrome(st))
                     cout<<"Stack is palindrome"<<endl;
                 else
                     cout<<"Stack is not palindrome."<<endl;
