@@ -2,13 +2,13 @@
 #include <cmath>
 using namespace std;
 int main(){
-    string suffix;
+    string postfix;
     float stack[100];
     int top=0;
-    cout<<"Enter valid suffix expression: ";
-    cin>>suffix;
-    for(char c: suffix){
-        if(c>'0' && c<'9'){
+    cout<<"Enter valid postfix expression: ";
+    cin>>postfix;
+    for(char c: postfix){
+        if(c>='0' && c<='9'){
             stack[top++] = c-'0';
         }
         else{
@@ -37,12 +37,11 @@ int main(){
                 default:
                     cout<<"Invalid expression."<<endl;
                     return 1;
-                
             }
             stack[top++] = result;
         }
     }
-    cout<<"Postfix expression: "<<suffix<<endl;
+    cout<<"Postfix expression: "<<postfix<<endl;
     cout<<"The result is: "<<stack[top-1]<<endl;
     return 0;
 }

@@ -16,11 +16,12 @@ int Priority(char c){
 }
 int main(){
     string infix, postfix;
-    char stack[100], top=0;
+    char stack[100];
+    int top=0;
     cout<<"Enter valid infix expression: ";
     cin>>infix;
     for(char c: infix){
-        if(c>='A' && c<='Z' || c>='a' && c<='z'){
+        if((c>='A'&&c<='Z')||(c>='a'&&c<='z')||(c>='0'&&c<='9')){
             postfix+=c;
         }
         else if(c=='('){
