@@ -115,6 +115,13 @@ void DEQueue(Employee* head){
             case 4:
                 DeleteAtEnd(head);
                 break;
+            case 5:
+                cout<<"Exited successfully.\n";
+                return;
+                break;
+            default:
+                cout<<"Invalid options.\n";
+                break;
         }
     }while(choice!=5);
     Display(head);
